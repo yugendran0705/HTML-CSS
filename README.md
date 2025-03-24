@@ -2,7 +2,7 @@
 
 ## Task 1
 
-This task involves creating a static webpage using semantic HTML elements such as <header>, <nav>, <main>, and <footer>.
+This task involves creating a static webpage using semantic HTML elements such as header, nav, main, and footer.
 
 Used CSS properties such as 
 - background-color: for background colour

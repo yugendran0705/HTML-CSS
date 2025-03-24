@@ -1,0 +1,33 @@
+#b1{
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    padding: 100px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+#b2{
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    padding: 100px;
+    border-radius: 10px;
+}
+
+main{
+    padding: 100px;
+    background-color: grey;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}

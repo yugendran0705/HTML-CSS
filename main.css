@@ -1,14 +1,14 @@
 main{
     padding: 100px;
     background-color: grey;
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 @media (max-width: 768px){
     main{
-        flex-direction: column;
+        grid-template-columns: 1fr;;
         padding: 20px;
     }
 }

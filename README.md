@@ -18,3 +18,8 @@ Used CSS properties such as
 - media query: to apply different styles for different screen sizes
 - hover: to change the style of an element when the mouse is over it
 - box-shadow: to add shadow effects around an element
+- transition: to create smooth animations when CSS properties change
+- z-index: to control the vertical stacking order of elements that overlap
+- visibility: to show or hide an element without changing the layout
+- transform: to apply 2D or 3D transformations to an element, such as rotate, scale, or translate
+- #menu-toggle:checked : to apply styles to an element when a checkbox or radio button with the id "menu-toggle" is checked

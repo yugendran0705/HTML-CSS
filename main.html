@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>Task 4</title>
+    <title>Task 6</title>
 </head>
 <body>
     <nav>
@@ -25,29 +25,33 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-    <main>
-        <div class="card">
-            <img src="img1.jpg" alt="HTML&CSS Image"/>
-            <div class="title">HTML & CSS</div>
-            <div class="description">HTML and CSS are the basic technologies for creating web pages and applications. HTML provides the structure of the page, CSS the layout, for a variety of devices. Along with graphics and scripting, HTML and CSS are the basis of building Web pages and Web Applications.</div>
-        </div>
-        <div class="card">
-            <img src="img1.jpg" alt="HTML&CSS Image"/>
-            <div class="title">HTML & CSS</div>
-            <div class="description">HTML and CSS are the basic technologies for creating web pages and applications. HTML provides the structure of the page, CSS the layout, for a variety of devices. Along with graphics and scripting, HTML and CSS are the basis of building Web pages and Web Applications.</div>
-        </div>
-        <div class="card">
-            <img src="img1.jpg" alt="HTML&CSS Image"/>
-            <div class="title">HTML & CSS</div>
-            <div class="description">HTML and CSS are the basic technologies for creating web pages and applications. HTML provides the structure of the page, CSS the layout, for a variety of devices. Along with graphics and scripting, HTML and CSS are the basis of building Web pages and Web Applications.</div>
-        </div>
-    </main>
-    <a href="#modal" class="open-btn">Open Modal</a>
-    <div id="modal" class="overlay">
-        <div class="modal">
-            <h2>Modal Title</h2>
-            <p>This is a modal popup</p>
-            <a href="#" class="close-btn">Close</a>
+
+    <div class="tabs">
+
+        <input type="radio" id="tab1" name="tabs" checked>
+        <label for="tab1" class="tab-label">Tab 1</label>
+      
+        <input type="radio" id="tab2" name="tabs">
+        <label for="tab2" class="tab-label">Tab 2</label>
+      
+        <input type="radio" id="tab3" name="tabs">
+        <label for="tab3" class="tab-label">Tab 3</label>
+      
+        <div class="content">
+          <div id="content1" class="tab-content">
+            <h2>Content for Tab 1</h2>
+            <p>This is the content displayed when Tab 1 is selected.</p>
+          </div>
+      
+          <div id="content2" class="tab-content">
+            <h2>Content for Tab 2</h2>
+            <p>This is the content displayed when Tab 2 is selected.</p>
+          </div>
+      
+          <div id="content3" class="tab-content">
+            <h2>Content for Tab 3</h2>
+            <p>This is the content displayed when Tab 3 is selected.</p>
+          </div>
         </div>
     </div>
     <footer>

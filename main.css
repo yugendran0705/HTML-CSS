@@ -78,7 +78,6 @@ ul li a:hover {
     background: #555;
 }
 
-/* Dropdown Menu */
 .dropdown {
     position: absolute;
     left: 0;
@@ -106,7 +105,6 @@ ul li:hover .dropdown {
     transform: translateY(0);
 }
 
-/* Mobile Styles */
 .hamburger {
     display: none;
     font-size: 28px;
@@ -117,7 +115,6 @@ ul li:hover .dropdown {
     display: none;
 }
 
-/* Responsive Navigation */
 @media (max-width: 768px) {
     .hamburger {
         display: block;

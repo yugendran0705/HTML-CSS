@@ -23,3 +23,4 @@ Used CSS properties such as
 - visibility: to show or hide an element without changing the layout
 - transform: to apply 2D or 3D transformations to an element, such as rotate, scale, or translate
 - #menu-toggle:checked : to apply styles to an element when a checkbox or radio button with the id "menu-toggle" is checked
+- :target: to apply styles to an element when its id matches the fragment identifier of the URL

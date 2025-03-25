@@ -1,6 +1,6 @@
 # HTML-CSS
 
-## Task 2
+## Task 3
 
 This task involves creating a card element
 

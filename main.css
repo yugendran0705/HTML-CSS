@@ -1,206 +1,69 @@
-main{
-    padding: 100px;
-    background-color: grey;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-@media (max-width: 768px){
-    main{
-        grid-template-columns: 1fr;;
-        padding: 20px;
-    }
-}
-
-p{
-    font-size: 20px;
-    background-color: black;
-    color: white;
+body{
     margin: 0;
-    padding: 50px 20px;
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* height: 100vh; */
-    background-color: white;
-    padding: 20px;
-    border: 2px;
-    border-radius: 10px;
+.carousel{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 }
 
-.card:hover{
-    box-shadow: 0 0 10px 5px black;
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
 }
 
-.title{
-    font-size: 30px;
-    margin: 20px 0;
-    font-weight: bold;
-}
-
-img{
+.slide > img {
+    display: block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
-nav {
-    background: #000;
-    color: #fff;
-    position: relative;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-}
-
-ul li {
-    position: relative;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    display: block;
-    transition: 0.3s;
-}
-
-ul li a:hover {
-    background: #555;
-}
-
-.dropdown {
-    position: absolute;
-    left: 0;
-    top: 50px;
-    background: #444;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease-in-out;
-    min-width: 180px;
-    z-index: 1000;
-}
-
-.dropdown li {
-    display: block;
-}
-
-.dropdown a {
-    padding: 10px 20px;
-}
-
-ul li:hover .dropdown {
+.slide[data-active]{
     opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    transition-delay: 0ms;
 }
 
-.hamburger {
-    display: none;
-    font-size: 28px;
+.carousel-button {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+    border-radius: 0.25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-#menu-toggle {
-    display: none;
+.carousel-button:hover,
+.carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        color: #fff;
-        padding: 15px;
-    }
-
-    ul {
-        display: none;
-        flex-direction: column;
-        background: #333;
-    }
-
-    #menu-toggle:checked + ul {
-        display: flex;
-    }
-
-    ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .dropdown {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        display: none;
-    }
-
-    ul li:hover .dropdown {
-        display: block;
-    }
+.carousel-button:focus{
+    outline: 1px solid black;
 }
 
-.tabs {
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.6);
-    overflow: hidden;
+.carousel-button.next {
+    right: 1rem;
 }
 
-input[type="radio"] {
-    display: none;  
+.carousel-button.prev {
+    left: 1rem;
 }
 
-.tab-labels {
-    display: flex;
-    background: #333;
-}
 
-.tab-label {
-    flex: 1;
-    padding: 15px;
-    text-align: center;
-    cursor: pointer;
-    color: black;
-    transition: background 0.3s;
-}
-
-.tab-label:hover {
-    background: #555;
-}
-
-input[type="radio"]:checked + .tab-label {
-    background: #e8ecf0;
-}
-
-.tab-content {
-    display: none;
-    padding: 20px;
-    animation: fadeIn 0.5s;
-}
-
-#tab1:checked ~ .content #content1,
-#tab2:checked ~ .content #content2,
-#tab3:checked ~ .content #content3 {
-    display: block;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }

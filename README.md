@@ -26,3 +26,12 @@ Used CSS properties such as
 - **transition**: The `transition` property allows you to change property values smoothly (over a given duration) when an element changes from one state to another.
 - **animation**: The `animation` property allows you to animate the transition of an element from one style to another. You can control the timing, duration, and other details of how the animation sequence should progress.
 - **@keyframes**: The `@keyframes` rule specifies the intermediate steps in a CSS animation sequence. It defines what styles the element will have at certain times. You can use percentages to specify when the styles should change, or use `from` and `to` to define the start and end points.
+
+## Carousel Functionality
+
+The JavaScript code in `main.js` provides the following functionality for a carousel:
+
+- **Button Click Event**: Adds click event listeners to buttons with the `data-carousel-button` attribute to navigate through slides.
+- **Slide Navigation**: Updates the active slide based on the button clicked (`next` or `prev`).
+- **Auto-Advance**: Automatically advances the carousel every 3 seconds when the document is visible.
+- **Pause on Hover**: Pauses the auto-advance when the mouse enters the carousel and resumes it when the mouse leaves.

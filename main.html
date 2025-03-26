@@ -4,58 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>Task 6</title>
+    <script src="main.js" defer></script>
+    <title>Task 7</title>
 </head>
 <body>
-    <nav>
-        <label for="menu-toggle" class="hamburger">☰</label>
-        <input type="checkbox" id="menu-toggle">
-        
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li>
-                <a href="#">Services ▾</a>
-                <ul class="dropdown">
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">SEO</a></li>
-                    <li><a href="#">Marketing</a></li>
-                </ul>
-            </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+  <div class="carousel" data-carousel>
+    <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+    <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+      <ul data-slides>
+          <li class="slide" data-active>
+              <img src="img2.jpg" alt="Slide 1">
+          </li>
+          <li class="slide">
+              <img src="img1.jpg" alt="Slide 2">
+          </li>
+          <li class="slide">
+              <img src="img3.jpg" alt="Slide 3">
+          </li>
         </ul>
-    </nav>
 
-    <div class="tabs">
-
-        <input type="radio" id="tab1" name="tabs" checked>
-        <label for="tab1" class="tab-label">Tab 1</label>
-      
-        <input type="radio" id="tab2" name="tabs">
-        <label for="tab2" class="tab-label">Tab 2</label>
-      
-        <input type="radio" id="tab3" name="tabs">
-        <label for="tab3" class="tab-label">Tab 3</label>
-      
-        <div class="content">
-          <div id="content1" class="tab-content">
-            <h2>Content for Tab 1</h2>
-            <p>This is the content displayed when Tab 1 is selected.</p>
-          </div>
-      
-          <div id="content2" class="tab-content">
-            <h2>Content for Tab 2</h2>
-            <p>This is the content displayed when Tab 2 is selected.</p>
-          </div>
-      
-          <div id="content3" class="tab-content">
-            <h2>Content for Tab 3</h2>
-            <p>This is the content displayed when Tab 3 is selected.</p>
-          </div>
-        </div>
-    </div>
-    <footer>
-        <p>Footer</p>
-    </footer>
+  </div>
 </body>
 </html>

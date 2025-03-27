@@ -1,23 +1,34 @@
-const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+let currentPage = 'home';
 
-accordionItemHeaders.forEach(accordionItemHeader => {
-  accordionItemHeader.addEventListener("click", event => {
-    
-    
-    const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
-    if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
-      currentlyActiveAccordionItemHeader.classList.toggle("active");
-      currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+  function navigateTo(pageId) {
+    if (currentPage === pageId) return; 
+    const current = document.getElementById(currentPage);
+    const next = document.getElementById(pageId);
+
+    if (current) {
+      current.classList.add('slide-out'); 
+      setTimeout(() => {
+        current.classList.remove('active', 'slide-out');
+        current.style.display = 'none';
+      }, 500);
     }
 
-    accordionItemHeader.classList.toggle("active");
-    const accordionItemBody = accordionItemHeader.nextElementSibling;
-    if(accordionItemHeader.classList.contains("active")) {
-      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+    if (next) {
+      next.style.display = 'block';
+      setTimeout(() => {
+        next.classList.add('active'); 
+      }, 10);
     }
-    else {
-      accordionItemBody.style.maxHeight = 0;
-    }
-    
+
+    currentPage = pageId; 
+  }
+
+  window.addEventListener('hashchange', () => {
+    const pageId = window.location.hash.replace('#', '') || 'home';
+    navigateTo(pageId);
   });
-});
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const pageId = window.location.hash.replace('#', '') || 'home';
+    navigateTo(pageId);
+  });

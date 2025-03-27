@@ -4,68 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>Task 9</title>
+    <script src="main.js" defer></script>
+    <title>Task 10</title>
 </head>
 <body>
-    <nav>
-        <label for="menu-toggle" class="hamburger">☰</label>
-        <input type="checkbox" id="menu-toggle">
-        
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li>
-                <a href="#">Services ▾</a>
-                <ul class="dropdown">
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">SEO</a></li>
-                    <li><a href="#">Marketing</a></li>
-                </ul>
-            </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+  <div class="container">
+    
+    <nav class="nav">
+      <a href="#home" onclick="navigateTo('home')">Home</a>
+      <a href="#about" onclick="navigateTo('about')">About</a>
+      <a href="#services" onclick="navigateTo('services')">Services</a>
+      <a href="#contact" onclick="navigateTo('contact')">Contact</a>
     </nav>
-    <main>
-        <div class="card">
-            <img src="img1.jpg" alt="HTML&CSS Image"/>
-            <div class="content-header">
-              <div class="title">HTML & CSS</div>
-              <div class="title">27/03/25</div>
-            </div>
-            <div class="description">HTML and CSS are the basic technologies for creating web pages and applications. HTML provides the structure of the page, CSS the layout, for a variety of devices. Along with graphics and scripting, HTML and CSS are the basis of building Web pages and Web Applications.</div>
-        </div>
-        <div class="card">
-            <img src="img1.jpg" alt="HTML&CSS Image"/>
-            <div class="content-header">
-              <div class="title">HTML & CSS</div>
-              <div class="title">27/03/25</div>
-            </div>
-            <div class="description">HTML and CSS are the basic technologies for creating web pages and applications. HTML provides the structure of the page, CSS the layout, for a variety of devices. Along with graphics and scripting, HTML and CSS are the basis of building Web pages and Web Applications.</div>
-        </div>
-        <div class="card">
-            <img src="img1.jpg" alt="HTML&CSS Image"/>
-            <div class="content-header">
-              <div class="title">HTML & CSS</div>
-              <div class="title">27/03/25</div>
-            </div>
-            <div class="description">HTML and CSS are the basic technologies for creating web pages and applications. HTML provides the structure of the page, CSS the layout, for a variety of devices. Along with graphics and scripting, HTML and CSS are the basis of building Web pages and Web Applications.</div>
-        </div>
-        <div class="card">
-            <img src="img1.jpg" alt="HTML&CSS Image"/>
-            <div class="content-header">
-              <div class="title">HTML & CSS</div>
-              <div class="title">27/03/25</div>
-            </div>
-            <div class="description">HTML and CSS are the basic technologies for creating web pages and applications. HTML provides the structure of the page, CSS the layout, for a variety of devices. Along with graphics and scripting, HTML and CSS are the basis of building Web pages and Web Applications.</div>
-        </div>
-        <div class="card">
-            <img src="img1.jpg" alt="HTML&CSS Image"/>
-            <div class="content-header">
-              <div class="title">HTML & CSS</div>
-              <div class="title">27/03/25</div>
-            </div>
-            <div class="description">HTML and CSS are the basic technologies for creating web pages and applications. HTML provides the structure of the page, CSS the layout, for a variety of devices. Along with graphics and scripting, HTML and CSS are the basis of building Web pages and Web Applications.</div>
-        </div>
-    </main>
+
+    <div class="content">
+      <section id="home" class="page active">
+        <h1>Welcome to Our Website</h1>
+        <p>This is the home page with smooth transitions.</p>
+      </section>
+  
+      <section id="about" class="page">
+        <h1>About Us</h1>
+        <p>Learn more about our team and mission.</p>
+      </section>
+  
+      <section id="services" class="page">
+        <h1>Our Services</h1>
+        <p>We offer a variety of services to meet your needs.</p>
+      </section>
+  
+      <section id="contact" class="page">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for more information.</p>
+      </section>
+    </div>
+  </div>
 </body>
 </html>

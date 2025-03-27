@@ -1,69 +1,59 @@
-body{
-    margin: 0;
+body {
+    font: poppins, sans-serif;
+    background-color: #34495e;
+    color: #fff;
+}
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
 }
 
-.carousel{
-    width: 100vw;
-    height: 100vh;
+.accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+.accordion-item {
+    background-color: #fff;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
     position: relative;
-}
-
-.slide{
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
-}
-
-.slide > img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slide[data-active]{
-    opacity: 1;
-    transition-delay: 0ms;
-}
-
-.carousel-button {
-    position: absolute;
-    background: none;
-    border: none;
-    font-size: 4rem;
-    top: 50%;
-    z-index: 2;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    border-radius: 0.25rem;
-    padding: 0 .5rem;
-    background-color: rgba(0, 0, 0, 0.1);
 }
-
-.carousel-button:hover,
-.carousel-button:focus {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.carousel-button:focus{
-    outline: 1px solid black;
-}
-
-.carousel-button.next {
+.accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
     right: 1rem;
 }
-
-.carousel-button.prev {
-    left: 1rem;
+.accordion-item-header.active::after {
+    content: "\2212";
+}
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
 }
 
-
-.carousel > ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+@media(max-width:767px) {
+    html {
+    font-size: 14px;
+    }
 }

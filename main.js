@@ -10,14 +10,14 @@ let currentPage = 'home';
       setTimeout(() => {
         current.classList.remove('active', 'slide-out');
         current.style.display = 'none';
-      }, 500);
+      }, 1000);
     }
 
     if (next) {
       next.style.display = 'block';
       setTimeout(() => {
         next.classList.add('active'); 
-      }, 10);
+      }, 1000);
     }
 
     currentPage = pageId; 

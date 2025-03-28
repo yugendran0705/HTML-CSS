@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 main{
     padding: 100px;
     background-color: grey;
@@ -151,7 +157,7 @@ ul li:hover .dropdown {
 
 .tabs {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 50px auto;
     background: white;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(255, 0, 0, 0.6);
